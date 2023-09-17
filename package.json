@@ -7,9 +7,13 @@
   "scripts": {
     "build": "tsc",
     "test": "ava",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "lint": "eslint src/**/*.ts",
     "pack": "ncc build",
-    "all": "npm run build && npm test",
-    "push": "npm run build && npm run pack && git add * && git commit -m \"ci: update built file\" && git push"
+    "test": "jest",
+    "all": "npm run build && npm run format && npm run lint && npm test && npm run pack",
+    "push": "npm run build && npm run pack && git add * && git commit -m \"ci: update built file\" && git push" 
   },
   "repository": {
     "type": "git",

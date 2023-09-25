@@ -27,8 +27,8 @@
     "@actions/github": "^5.0.3"
   },
   "devDependencies": {
-    "@octokit/types": "^11.1.0",
-    "@types/node": "20.6.2",
+    "@octokit/types": "^12.0.0",
+    "@types/node": "20.7.0",
     "@vercel/ncc": "^0.38.0",
     "ava": "^5.3.1",
     "ts-node": "^10.9.1",

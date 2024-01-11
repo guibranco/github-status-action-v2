@@ -34,7 +34,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [guibranco/github-status-action-v2](https://github.com/guibranco/github-status-action-v2)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|11<br/>Tools used|01/05/24 <br/>Report generated|
+|11<br/>Tools used|01/11/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -129,9 +129,9 @@ Full tech stack [here](/techstack.md)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[@types/node](https://www.npmjs.com/@types/node)|v20.10.4|12/11/23|dependabot[bot] |MIT|N/A|
+|[@types/node](https://www.npmjs.com/@types/node)|v20.10.7|01/08/24|dependabot[bot] |MIT|N/A|
 |[ava](https://www.npmjs.com/ava)|v6.0.1|04/30/20|Sibz |MIT|N/A|
-|[ts-node](https://www.npmjs.com/ts-node)|v10.9.2|12/11/23|dependabot[bot] |MIT|N/A|
+|[ts-node](https://www.npmjs.com/ts-node)|v10.9.2|01/08/24|dependabot[bot] |MIT|N/A|
 
 <br/>
 <div align='center'>

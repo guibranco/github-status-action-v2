@@ -29828,7 +29828,7 @@ function run() {
             return;
         }
         try {
-            yield octokit.repos.createCommitStatus(statusRequest);
+            yield octokit.rest.repos.createCommitStatus(statusRequest);
         }
         catch (error) {
             if (error instanceof Error) {

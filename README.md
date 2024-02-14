@@ -8,6 +8,8 @@
 
 Adds a status update to a commit. GitHub will always show the latest state of a context.
 
+Fork of branch to try to fix proxy bug.
+
 > **Warning**
 >
 >**Disclaimer** This version was created because the [original (V1)](https://github.com/Sibz/github-status-action) has not been updated by the creator for a while.

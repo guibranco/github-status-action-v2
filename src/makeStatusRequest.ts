@@ -10,10 +10,10 @@ export const ERR_INVALID_STATE = "Input 'state' must be one of success | error |
 const regExUsername = /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i;
 
 export default function makeStatusRequest(testCore: any | null = null): StatusRequest {
-    let core: CoreActionsForTesting =
+    const core: CoreActionsForTesting =
         testCore as CoreActionsForTesting ?? actionsCore as CoreActionsForTesting;
 
-    let request: StatusRequest = {} as StatusRequest;
+    const request: StatusRequest = {} as StatusRequest;
 
     request.context = core.getInput(inputNames.context);
     request.description = core.getInput(inputNames.desc);

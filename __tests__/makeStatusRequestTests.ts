@@ -96,11 +96,11 @@ test("should getInput repo and remove leading owner name", t=> {
 });
 
 test("when owner is not a valid GitHub username, should throw", t=> {
-    let err = t.throws(()=> makeStatusRequest(actionsCoreAlt2));
+    const err = t.throws(()=> makeStatusRequest(actionsCoreAlt2));
     t.is(err.message, ERR_INVALID_OWNER)
 });
 
 test("should validate state", t=> {
-    let err = t.throws(()=> makeStatusRequest(actionsCoreAlt3));
+    const err = t.throws(()=> makeStatusRequest(actionsCoreAlt3));
     t.is(err.message, ERR_INVALID_STATE)
 });

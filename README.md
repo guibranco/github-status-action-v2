@@ -8,9 +8,9 @@
 
 Adds a status update to a commit. GitHub will always show the latest state of a context.
 
-> **Warning**
+> [!Warning]
 >
->**Disclaimer** This version was created because the [original (V1)](https://github.com/Sibz/github-status-action) has not been updated by the creator for a while.
+>**Disclaimer** This version was created because the [original (V1)](https://github.com/Sibz/github-status-action) has been archived on May 1, 2024.
 
 ## Usage
 

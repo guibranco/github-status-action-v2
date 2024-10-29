@@ -64,3 +64,15 @@ on: # run on any PRs and main branch changes
         state: 'success'
         sha: ${{github.event.pull_request.head.sha || github.sha}}
 ```
+
+## Permissions Settings for GitHub Actions
+
+With the introduction of the `permissions` block in GitHub Actions, it is crucial to configure the necessary permissions for your workflows to function correctly. Below is a guide to help you set up the permissions securely and effectively.
+
+### Required Permissions
+
+Refer to the [GitHub documentation](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/controlling-permissions-for-github_token) for a detailed list of available permissions.
+
+### Example Configuration
+
+```yaml

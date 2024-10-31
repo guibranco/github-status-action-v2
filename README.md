@@ -42,20 +42,24 @@ None.
 
 ```yml
 name: "test"
+
 on: # run on any PRs and main branch changes
   pull_request:
   push:
     branches:
       - main
 
-  jobs:
-  test: # make sure the action works on a clean machine without building
+permissions:
+  statuses: write
+
+jobs:
+  test:
     runs-on: ubuntu-latest
     steps:
     
     - uses: actions/checkout@v4
 
-    - name: Run the action # You would run your tests before this using the output to set state/desc
+    - name: Run the action
       uses: guibranco/github-status-action-v2@latest
       with: 
         authToken: ${{secrets.GITHUB_TOKEN}}

@@ -76,7 +76,3 @@ With the introduction of the `permissions` block in GitHub Actions, it is crucia
 ### Required Permissions
 
 Refer to the [GitHub documentation](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/controlling-permissions-for-github_token) for a detailed list of available permissions.
-
-### Example Configuration
-
-```yaml

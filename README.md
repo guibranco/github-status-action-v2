@@ -42,20 +42,24 @@ None.
 
 ```yml
 name: "test"
+
 on: # run on any PRs and main branch changes
   pull_request:
   push:
     branches:
       - main
 
-  jobs:
-  test: # make sure the action works on a clean machine without building
+permissions:
+  statuses: write
+
+jobs:
+  test:
     runs-on: ubuntu-latest
     steps:
     
     - uses: actions/checkout@v4
 
-    - name: Run the action # You would run your tests before this using the output to set state/desc
+    - name: Run the action
       uses: guibranco/github-status-action-v2@latest
       with: 
         authToken: ${{secrets.GITHUB_TOKEN}}
@@ -64,3 +68,11 @@ on: # run on any PRs and main branch changes
         state: 'success'
         sha: ${{github.event.pull_request.head.sha || github.sha}}
 ```
+
+## Permissions Settings for GitHub Actions
+
+With the introduction of the `permissions` block in GitHub Actions, it is crucial to configure the necessary permissions for your workflows to function correctly. Below is a guide to help you set up the permissions securely and effectively.
+
+### Required Permissions
+
+Refer to the [GitHub documentation](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/controlling-permissions-for-github_token) for a detailed list of available permissions.

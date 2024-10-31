@@ -1,6 +1,5 @@
 permissions:
-  contents: read
-  issues: write
+  statuses: write
 name: 'github-status-action-v2'
 description: 'Adds a check status on a commit, GitHub reports the last status added for a particular context.'
 author: 'GuiBranco'

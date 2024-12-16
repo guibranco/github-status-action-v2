@@ -25,7 +25,7 @@
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.0",
-    "node": "^23.3.0"
+    "node": "^23.4.0"
   },
   "devDependencies": {
     "@octokit/types": "^13.6.2",

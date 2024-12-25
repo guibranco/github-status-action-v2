@@ -1,10 +1,14 @@
-<p align="center">
-  <a href="https://github.com/guibranco/github-status-action-v2"><img alt="github-status-action-v2 status" src="https://github.com/guibranco/github-status-action-v2/workflows/test/badge.svg"></a>
-  <a href="https://github.com/guibranco/github-status-action-v2"><img alt="github-status-action-v2 status" src="https://github.com/guibranco/github-status-action-v2/workflows/build/badge.svg"></a>
-  <a href="https://wakatime.com/badge/github/guibranco/github-status-action-v2"><img src="https://wakatime.com/badge/github/guibranco/github-status-action-v2.svg" alt="wakatime"></a>
-</p>
-
 # GitHub Status Action V2
+
+[![GitHub repo](https://img.shields.io/badge/GitHub-guibranco%2Fgithub--status--action--v2-green.svg?style=plastic&logo=github)](https://github.com/guibranco/github-status-action-v2 "shields.io")
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/guibranco/github-status-action-v2?color=green&label=Code%20size&style=plastic&logo=github)](https://github.com/guibranco/github-status-action-v2 "shields.io")
+[![GitHub last commit](https://img.shields.io/github/last-commit/guibranco/github-status-action-v2?color=green&logo=github&style=plastic&label=Last%20commit)](https://github.com/guibranco/github-status-action-v2 "shields.io")
+[![GitHub license](https://img.shields.io/github/license/guibranco/github-status-action-v2?color=green&logo=github&style=plastic&label=License)](https://github.com/guibranco/github-status-action-v2 "shields.io")
+
+![Test](https://github.com/guibranco/github-status-action-v2/actions/workflows/test.yml/badge.svg)
+![Build](https://github.com/guibranco/github-status-action-v2/actions/workflows/build.yml/badge.svg)
+![Create Release](https://github.com/guibranco/github-status-action-v2/actions/workflows/create-release.yml/badge.svg)
+[![wakatime](https://wakatime.com/badge/github/guibranco/github-status-action-v2.svg)](https://wakatime.com/badge/github/guibranco/github-status-action-v2)
 
 Adds a status update to a commit. GitHub will always show the latest state of a context.
 

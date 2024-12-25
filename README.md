@@ -12,7 +12,7 @@
 
 Adds a status update to a commit. GitHub will always show the latest state of a context.
 
-> [!Warning]
+> [!Important]
 >
 >**Disclaimer** This version was created because the [original (V1)](https://github.com/Sibz/github-status-action) has been archived on May 1, 2024.
 

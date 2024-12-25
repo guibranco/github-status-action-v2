@@ -1,0 +1,4 @@
+theme: jekyll-theme-cayman
+title: 🏃 :octocat: action to update status check of a pull request
+description: Adds a status update to a commit. GitHub will always show the latest state of a context.
+show_downloads: true

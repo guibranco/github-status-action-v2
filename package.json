@@ -28,12 +28,12 @@
     "node": "^23.6.0"
   },
   "devDependencies": {
-    "@octokit/types": "^13.6.2",
+    "@octokit/types": "^13.7.0",
     "@types/node": "22.10.5",
     "@vercel/ncc": "^0.38.3",
     "ava": "^6.2.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3"
   },
   "ava": {
     "extensions": [

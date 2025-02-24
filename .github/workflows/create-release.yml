@@ -39,7 +39,7 @@ jobs:
 
       - name: Create Release
         if: ${{ steps.changes.outputs.dist == 'true' || github.event_name == 'workflow_dispatch' }}
-        uses: ncipollo/release-action@v1.15.0
+        uses: ncipollo/release-action@v1.16.0
         with:
           allowUpdates: false
           skipIfReleaseExists: true

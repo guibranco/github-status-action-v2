@@ -14,14 +14,14 @@ Adds a status update to a commit. GitHub will always show the latest state of a 
 
 > [!Important]
 >
->**Disclaimer** This version was created because the [original (V1)](https://github.com/Sibz/github-status-action) has been archived on May 1, 2024.
+> **Disclaimer** This version was created because the [original (V1)](https://github.com/Sibz/github-status-action) has been archived on May 1, 2024.
 
 ## Usage
 
 ### Inputs
 
 * `authToken` (required)  
-Use secrets.GITHUB_TOKEN or your own token if you need to trigger other workflows that use "on: status"'
+Use secrets.GITHUB_TOKEN or your own token if you need to trigger other workflows that use "on: status"
 * `state` (required)  
 The status of the check should only be `success`, `error`, `failure` or `pending`
 * `context`  
@@ -34,13 +34,31 @@ The repository owner defaults to context github.repository_owner if omitted
 Repository, default to context github.repository if omitted
 * `sha`  
 SHA of commit to update status on, defaults to context github.sha  
-*If using `on: pull_request` use `github.event.pull_request.head.sha`*
+*If using `on: pull_request` use `github.event.pull_request.head.sha`
 * `target_url`  
 Url to use for the details link. If omitted no link is shown.
-  
-### Outputs
 
-None.
+## Local Debugging with @github/local-action
+
+To facilitate local debugging of your GitHub Action, this repository now includes support for [@github/local-action](https://github.com/github/local-action). This utility allows you to run and debug your action code locally by simulating the GitHub Actions runtime environment.
+
+### Setup
+
+1. Install the dependencies:
+
+```bash
+npm install
+```
+
+2. Run the local-action debugging command:
+
+```bash
+npx @github/local-action
+```
+
+This command bootstraps your environment and stubs out the GitHub Actions Toolkit APIs so that you can test your action locally.
+
+For more detailed usage and advanced configuration, please refer to the [local-action documentation](https://github.com/github/local-action).
 
 ## Example
 

@@ -35,15 +35,30 @@ jobs:
         id: gitversion
         uses: gittools/actions/gitversion/execute@v4
 
-      - name: Create Release
+      - name: Create Release (tag)
         if: ${{ steps.changes.outputs.dist == 'true' || github.event_name == 'workflow_dispatch' }}
         uses: ncipollo/release-action@v1.20.0
         with:
           allowUpdates: false
           skipIfReleaseExists: true
           draft: false
-          makeLatest: true
+          makeLatest: false
           tag: v${{ steps.gitversion.outputs.semVer }}
           name: Release v${{ steps.gitversion.outputs.semVer }}
           generateReleaseNotes: true
-          body: Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
+          body:
+            Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
+
+      - name: Create Release (latest)
+        if: ${{ steps.changes.outputs.dist == 'true' || github.event_name == 'workflow_dispatch' }}
+        uses: ncipollo/release-action@v1.20.0
+        with:
+          allowUpdates: true
+          skipIfReleaseExists: false
+          draft: false
+          makeLatest: true
+          tag: latest
+          name: Release v${{ steps.gitversion.outputs.semVer }}
+          generateReleaseNotes: true
+          body:
+            Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}

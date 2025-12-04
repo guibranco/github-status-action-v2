@@ -1,5 +1,5 @@
 import * as core from "@actions/core";
-import * as github from '@actions/github';
+import * as github from "@actions/github";
 import makeStatusRequest, { StatusRequest } from "./makeStatusRequest";
 
 async function run(): Promise<void> {
@@ -38,7 +38,7 @@ async function run(): Promise<void> {
         `Github returned error "${error.message}" when setting status on commit: ${statusRequest.sha}\n` +
           ` Request object:\n` +
           ` ${JSON.stringify(statusRequest, null, 2)}` +
-          ` Possible issues could be that the token used does not have access to the repository containing the commit or the commit/repository does not exist.`
+          ` Possible issues could be that the token used does not have access to the repository containing the commit or the commit/repository does not exist.`,
       );
     }
   }

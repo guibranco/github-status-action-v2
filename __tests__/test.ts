@@ -1,3 +1,3 @@
-import test from "ava"
+import test from "ava";
 
-test("TODO", t=>t.pass());
+test("TODO", (t) => t.pass());

@@ -43,22 +43,8 @@ jobs:
           allowUpdates: false
           skipIfReleaseExists: true
           draft: false
-          makeLatest: false
-          tag: v${{ steps.gitversion.outputs.semVer }}
-          name: Release v${{ steps.gitversion.outputs.semVer }}
-          generateReleaseNotes: true
-          body:
-            Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
-
-      - name: Create Release (latest)
-        if: ${{ steps.changes.outputs.dist == 'true' || github.event_name == 'workflow_dispatch' }}
-        uses: ncipollo/release-action@v1.21.0
-        with:
-          allowUpdates: true
-          skipIfReleaseExists: false
-          draft: false
           makeLatest: true
-          tag: latest
+          tag: v${{ steps.gitversion.outputs.semVer }}
           name: Release v${{ steps.gitversion.outputs.semVer }}
           generateReleaseNotes: true
           body:

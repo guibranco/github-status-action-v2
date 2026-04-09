@@ -25,15 +25,16 @@ jobs:
           filters: |
             dist:
               - "dist/**"
+              - "action.yml"
 
       - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v4
+        uses: gittools/actions/gitversion/setup@v4.5.0
         with:
           versionSpec: "6.x"
 
       - name: Determine Version
         id: gitversion
-        uses: gittools/actions/gitversion/execute@v4
+        uses: gittools/actions/gitversion/execute@v4.5.0
 
       - name: Create Release (tag)
         if: ${{ steps.changes.outputs.dist == 'true' || github.event_name == 'workflow_dispatch' }}

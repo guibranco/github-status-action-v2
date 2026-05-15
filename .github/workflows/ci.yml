@@ -54,5 +54,6 @@ jobs:
       - name: Update latest tag
         if: ${{ steps.create_release.outputs.id != '' }}
         run: |
-          git tag --force latest
-          git push origin refs/tags/latest --force
+          RELEASE_TAG="v${{ steps.gitversion.outputs.semVer }}"
+          git tag --force latest "$RELEASE_TAG"
+          git push origin refs/tags/latest:refs/tags/latest --force

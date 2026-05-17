@@ -55,5 +55,6 @@ jobs:
         if: ${{ steps.create_release.outputs.id != '' }}
         run: |
           RELEASE_TAG="v${{ steps.gitversion.outputs.semVer }}"
+          git fetch origin "refs/tags/${RELEASE_TAG}:refs/tags/${RELEASE_TAG}"
           git tag --force latest "$RELEASE_TAG"
           git push origin refs/tags/latest:refs/tags/latest --force

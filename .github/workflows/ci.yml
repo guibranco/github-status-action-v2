@@ -37,6 +37,7 @@ jobs:
         uses: gittools/actions/gitversion/execute@v4.5.0
 
       - name: Create Release (tag)
+        id: create_release
         if: ${{ steps.changes.outputs.dist == 'true' || github.event_name == 'workflow_dispatch' }}
         uses: ncipollo/release-action@v1.21.0
         with:
@@ -49,3 +50,10 @@ jobs:
           generateReleaseNotes: true
           body:
             Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
+
+      - name: Update latest tag
+        if: ${{ steps.create_release.outputs.id != '' }}
+        run: |
+          RELEASE_TAG="v${{ steps.gitversion.outputs.semVer }}"
+          git tag --force latest "$RELEASE_TAG"
+          git push origin refs/tags/latest:refs/tags/latest --force

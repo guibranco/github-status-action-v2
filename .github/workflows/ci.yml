@@ -36,7 +36,7 @@ jobs:
         id: gitversion
         uses: gittools/actions/gitversion/execute@v4.5.0
 
-      - name: Create Release (tag)
+      - name: Create Release (tag) - fullSemVer
         id: create_release
         if: ${{ steps.changes.outputs.dist == 'true' || github.event_name == 'workflow_dispatch' }}
         uses: ncipollo/release-action@v1.21.0
@@ -50,6 +50,20 @@ jobs:
           generateReleaseNotes: true
           body:
             Release ${{ steps.gitversion.outputs.semVer }} of ${{ github.event.repository.name }}
+
+      - name: Create Release (tag) - major version
+        if: ${{ steps.changes.outputs.dist == 'true' || github.event_name == 'workflow_dispatch' }}
+        uses: ncipollo/release-action@v1.21.0
+        with:
+          allowUpdates: true
+          skipIfReleaseExists: false
+          draft: false
+          makeLatest: false
+          tag: v${{ steps.gitversion.outputs.major }}
+          name: Release v${{ steps.gitversion.outputs.major }}
+          generateReleaseNotes: true
+          body:
+            Release ${{ steps.gitversion.outputs.major }} of ${{ github.event.repository.name }}
 
       - name: Update latest tag
         if: ${{ steps.create_release.outputs.id != '' }}

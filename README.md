@@ -81,7 +81,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run the action
-        uses: guibranco/github-status-action-v2@v1.2.3
+        uses: guibranco/github-status-action-v2@v1
         with:
           authToken: ${{secrets.GITHUB_TOKEN}}
           context: "Test run"

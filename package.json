@@ -26,11 +26,11 @@
   "dependencies": {
     "@actions/core": "^2.0.2",
     "@actions/github": "^9.1.1",
-    "node": "^26.9.0"
+    "node": "^26.10.0"
   },
   "devDependencies": {
     "@octokit/types": "^18.0.0",
-    "@types/node": "26.6.2",
+    "@types/node": "26.6.3",
     "@vercel/ncc": "^0.45.0",
     "ava": "^7.0.0",
     "ts-node": "^10.9.2",
